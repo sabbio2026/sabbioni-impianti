@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -176,6 +177,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="bg-white text-[#0F1117] antialiased overflow-x-hidden">
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
