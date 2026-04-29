@@ -1,8 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 200" fill="none">
   <!-- SABBIONI text -->
   <text x="8" y="92" font-family="Arial Black, Impact, sans-serif" font-weight="900" font-size="86" fill="#1A1F6B" letter-spacing="-2">SABBIONI</text>
-  <!-- Green slash / I mark -->
-  <rect x="15" y="18" width="10" height="88" rx="5" fill="#8DC63F" transform="rotate(-12 20 62)"/>
-  <!-- IMPIANTI text -->
+<!-- IMPIANTI text -->
   <text x="2" y="178" font-family="Arial Black, Impact, sans-serif" font-weight="900" font-size="86" fill="#8DC63F" letter-spacing="-2">IMPIANTI<tspan font-family="Arial Black, sans-serif" font-size="26" fill="#1A1F6B" dy="-18" dx="5">S.R.L</tspan></text>
 </svg>
