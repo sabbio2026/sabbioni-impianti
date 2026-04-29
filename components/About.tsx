@@ -42,7 +42,6 @@ export default function About() {
           <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-[#64748B]">
             Dal 1990 installiamo e manteniamo impianti per privati, aziende e strutture pubbliche
             nell&apos;area di Roma e provincia. Un unico interlocutore, senza subappalti sulle fasi critiche.
-            Sede: <strong className="text-[#0F1117] font-semibold">Via Salaria 108D, Monterotondo (Roma)</strong>.
           </p>
         </motion.div>
 
