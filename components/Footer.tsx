@@ -1,7 +1,15 @@
 import Image from "next/image";
 import { Phone, Mail, MapPin, ArrowUpRight } from "lucide-react";
 
-const services = ["Impianti Elettrici Civili","Impianti Industriali","Impianti Ospedalieri","Fotovoltaico","Condizionamento","Termoidraulica","Domotica","Videosorveglianza"];
+const services = [
+  { label: "Impianti Elettrici", href: "/servizi/impianti-elettrici" },
+  { label: "Fotovoltaico",       href: "/servizi/fotovoltaico" },
+  { label: "Climatizzazione",    href: "/servizi/climatizzazione" },
+  { label: "Impianti Speciali",  href: "/servizi/sicurezza" },
+  { label: "Manutenzione",       href: "/servizi/manutenzione" },
+  { label: "Termoidraulica",     href: "/#servizi" },
+  { label: "Domotica",           href: "/#servizi" },
+];
 const navLinks = [
   { label:"Chi Siamo", href:"#chi-siamo" },{ label:"Servizi", href:"#servizi" },
   { label:"Portfolio", href:"#progetti" },{ label:"Clienti", href:"#clienti" },
@@ -39,9 +47,9 @@ export default function Footer() {
             <h4 className="font-semibold text-white text-sm mb-5">Servizi</h4>
             <ul className="space-y-2">
               {services.map(s => (
-                <li key={s}>
-                  <a href="#servizi" className="text-white/40 hover:text-[#8DC63F] text-sm transition-colors flex items-center gap-1.5 group">
-                    <span className="w-1 h-1 rounded-full bg-[#8DC63F]/40 group-hover:bg-[#8DC63F] transition-colors" />{s}
+                <li key={s.label}>
+                  <a href={s.href} className="text-white/40 hover:text-[#8DC63F] text-sm transition-colors flex items-center gap-1.5 group">
+                    <span className="w-1 h-1 rounded-full bg-[#8DC63F]/40 group-hover:bg-[#8DC63F] transition-colors" />{s.label}
                   </a>
                 </li>
               ))}

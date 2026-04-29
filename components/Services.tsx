@@ -2,27 +2,28 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Zap, Wind, Droplets, Sun, Shield, Home, CheckCircle2 } from "lucide-react";
+import { Zap, Wind, Droplets, Sun, Shield, Home, CheckCircle2, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const E = [0.23, 1, 0.32, 1] as const;
 
 const svc = [
-  { icon: Zap,      title: "Impianti Elettrici",  sub: "Civili · Industriali · Ospedalieri", color: "#8DC63F",
+  { icon: Zap,      title: "Impianti Elettrici",  sub: "Civili · Industriali · Ospedalieri", color: "#8DC63F", href: "/servizi/impianti-elettrici",
     desc: "Progettiamo e realizziamo impianti elettrici civili e industriali: quadri BT/MT, forza motrice, illuminazione. Interveniamo su nuove costruzioni, ristrutturazioni e adeguamenti normativi.",
     tags: ["Cabine MT/BT", "Quadri BT", "Forza Motrice", "BUS Management"] },
-  { icon: Shield,   title: "Impianti Speciali",   sub: "Sicurezza · TVCC · Antincendio",      color: "#4A90D9",
+  { icon: Shield,   title: "Impianti Speciali",   sub: "Sicurezza · TVCC · Antincendio",      color: "#4A90D9", href: "/servizi/sicurezza",
     desc: "Progettiamo e installiamo sistemi di videosorveglianza IP, antintrusione, controllo accessi e rilevazione incendi per edifici residenziali, commerciali e industriali, secondo normativa vigente.",
     tags: ["TVCC 4K", "Antintrusione", "Antincendio", "Antenne TV-SAT"] },
-  { icon: Wind,     title: "Condizionamento",      sub: "Climatizzazione · VRF · AHU",        color: "#06B6D4",
+  { icon: Wind,     title: "Condizionamento",      sub: "Climatizzazione · VRF · AHU",        color: "#06B6D4", href: "/servizi/climatizzazione",
     desc: "Installiamo e manteniamo sistemi di climatizzazione per residenziale, commerciale e industriale: split, VRF multi-split, AHU e pompe di calore. Operiamo con patentino F-GAS.",
     tags: ["VRF Multi-split", "AHU", "Free-cooling", "F-GAS Cert."] },
-  { icon: Droplets, title: "Termoidraulica",       sub: "Riscaldamento · Idraulica",           color: "#F59E0B",
+  { icon: Droplets, title: "Termoidraulica",       sub: "Riscaldamento · Idraulica",           color: "#F59E0B", href: null,
     desc: "Impianti di riscaldamento, distribuzione idrica e sanitaria industriale. Pompe di calore e pannelli radianti per residenziale e commerciale ad alta efficienza.",
     tags: ["Pompe di calore", "Pannelli Radianti", "Distribuzione", "Sanitaria Ind."] },
-  { icon: Sun,      title: "Fotovoltaico",          sub: "Solare · Storage · IoT",             color: "#F97316",
-    desc: "Installiamo impianti fotovoltaici con o senza sistema di accumulo per abitazioni e aziende. Gestiamo progettazione, installazione e pratiche GSE per l&apos;accesso agli incentivi.",
+  { icon: Sun,      title: "Fotovoltaico",          sub: "Solare · Storage · IoT",             color: "#F97316", href: "/servizi/fotovoltaico",
+    desc: "Installiamo impianti fotovoltaici con o senza sistema di accumulo per abitazioni e aziende. Gestiamo progettazione, installazione e pratiche GSE per l'accesso agli incentivi.",
     tags: ["Ottimizzatori", "BESS Storage", "IoT Monitor", "Pratiche GSE"] },
-  { icon: Home,     title: "Domotica",              sub: "Smart Building · Automazione",       color: "#A855F7",
+  { icon: Home,     title: "Domotica",              sub: "Smart Building · Automazione",       color: "#A855F7", href: null,
     desc: "Automazione degli impianti per edifici residenziali e commerciali: controllo di luci, clima, sicurezza e consumi da smartphone. Protocolli KNX e Z-Wave.",
     tags: ["KNX Protocol", "App Mobile", "Energy Mgmt", "Scene Auto"] },
 ];
@@ -74,6 +75,13 @@ export default function Services() {
                   </li>
                 ))}
               </ul>
+              {s.href && (
+                <Link href={s.href}
+                  className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold transition-colors"
+                  style={{ color: s.color }}>
+                  Approfondisci <ArrowRight size={12} />
+                </Link>
+              )}
             </motion.div>
           ))}
         </div>

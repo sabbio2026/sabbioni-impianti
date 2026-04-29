@@ -4,6 +4,7 @@ import Services from "@/components/Services";
 import Stats from "@/components/Stats";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
+import HomeFAQ from "@/components/HomeFAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -17,6 +18,7 @@ export default function Home() {
       <Services />
       <About />
       <Projects />
+      <HomeFAQ />
       <Contact />
       <Footer />
       <WhatsAppButton />

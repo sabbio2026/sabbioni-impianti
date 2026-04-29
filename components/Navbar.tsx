@@ -6,11 +6,10 @@ import Image from "next/image";
 import { Menu, X, Phone } from "lucide-react";
 
 const links = [
-  { href: "#servizi",    label: "Servizi" },
-  { href: "#chi-siamo", label: "Chi Siamo" },
-  { href: "#progetti",  label: "Progetti" },
-  { href: "#clienti",   label: "Clienti" },
-  { href: "#contatti",  label: "Contatti" },
+  { href: "/#servizi",    label: "Servizi" },
+  { href: "/#chi-siamo", label: "Chi Siamo" },
+  { href: "/#progetti",  label: "Progetti" },
+  { href: "/#contatti",  label: "Contatti" },
 ];
 
 export default function Navbar() {
@@ -31,9 +30,13 @@ export default function Navbar() {
   }, []);
 
   const go = (href: string) => (e: React.MouseEvent) => {
-    e.preventDefault();
-    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
-    setOpen(false);
+    const anchor = href.startsWith("/") ? href.slice(1) : href;
+    const el = document.querySelector(anchor);
+    if (el) {
+      e.preventDefault();
+      el.scrollIntoView({ behavior: "smooth" });
+      setOpen(false);
+    }
   };
 
   return (
