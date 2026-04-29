@@ -21,7 +21,7 @@ const projects = [
   { id:3,  n:"03", client:"C.C.C. Costruzioni Civili Cerasi S.p.A.",  work:"Impianti elettrici e speciali",                        loc:"Roma",  cat:"Industriale",  tags:[] },
   { id:4,  n:"04", client:"Gruppo CTY S.r.l.",                        work:"Impianti elettrici, speciali e meccanici",             loc:"Roma",  cat:"Industriale",  tags:[] },
   { id:5,  n:"05", client:"Centro Polifunzionale di Sperimentazione", work:"Manutenzione cabine MT/BT e impianti climatizzazione", loc:"Roma",  cat:"Difesa",       tags:["Ministero della Difesa"] },
-  { id:6,  n:"06", client:"Scuola Interforze NBC Rieti",              work:"Impianti speciali",                                    loc:"Rieti", cat:"Difesa",       tags:[] },
+  { id:6,  n:"06", client:"Scuola Interforze NBC Rieti",              work:"Impianti speciali — Manutenzione cabine MT/BT — Terzo Responsabile impianti elettrici", loc:"Rieti", cat:"Difesa", tags:[] },
   { id:7,  n:"07", client:"Comando Legione Carabinieri Lazio",        work:"Impianti per efficientamento energetico",              loc:"Lazio", cat:"Difesa",       tags:[] },
   { id:8,  n:"08", client:"AVC S.r.l.",                               work:"Impianti elettrici e speciali",                        loc:"Roma",  cat:"Industriale",  tags:[] },
   { id:9,  n:"09", client:"Perfect Car",                              work:"Impianto fotovoltaico",                                loc:"Roma",  cat:"Fotovoltaico", tags:[] },
