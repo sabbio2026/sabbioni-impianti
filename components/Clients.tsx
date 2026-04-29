@@ -9,12 +9,6 @@ const E = [0.23, 1, 0.32, 1] as const;
 const clients = [
   { name: "Policlinico Gemelli",      sector: "Ospedaliero" },
   { name: "Università La Sapienza",   sector: "Universitario" },
-  { name: "Ospedale San Giovanni",    sector: "Ospedaliero" },
-  { name: "Comune di Roma",           sector: "Pubblica Amm." },
-  { name: "Atac S.p.A.",              sector: "Trasporti" },
-  { name: "Acea Group",               sector: "Utilities" },
-  { name: "ASL Roma 1",               sector: "Sanitario" },
-  { name: "ENI Rewind",               sector: "Energia" },
 ];
 
 const testimonials = [
