@@ -66,9 +66,9 @@ export default function Navbar() {
 
           {/* Actions */}
           <div className="flex items-center gap-3">
-            <a href="tel:+393703640131"
+            <a href="tel:+390690069123"
               className="hidden md:flex items-center gap-1.5 text-sm text-[#0F1117]/45 hover:text-[#8DC63F] transition-colors">
-              <Phone size={13} strokeWidth={2.5} /> +39 370 364 0131
+              <Phone size={13} strokeWidth={2.5} /> +39 06 900 69 123
             </a>
             <a href="#contatti" onClick={go("#contatti")} className="btn-primary px-5 py-2.5 text-sm hidden md:inline-flex rounded-xl">
               Preventivo gratuito
@@ -100,8 +100,8 @@ export default function Navbar() {
                 ))}
               </nav>
               <div className="mt-auto flex flex-col gap-3">
-                <a href="tel:+393703640131" className="flex items-center justify-center gap-2 py-3.5 rounded-xl border border-[#8DC63F]/40 text-[#5A9222] font-semibold text-sm">
-                  <Phone size={15} /> +39 370 364 0131
+                <a href="tel:+390690069123" className="flex items-center justify-center gap-2 py-3.5 rounded-xl border border-[#8DC63F]/40 text-[#5A9222] font-semibold text-sm">
+                  <Phone size={15} /> +39 06 900 69 123
                 </a>
                 <a href="#contatti" onClick={go("#contatti")} className="btn-primary justify-center py-3.5 rounded-xl text-sm">
                   Richiedi Preventivo

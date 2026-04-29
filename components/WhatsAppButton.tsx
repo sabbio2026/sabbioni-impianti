@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
-const WA_URL = `https://wa.me/393703640131?text=${encodeURIComponent("Buongiorno, vorrei richiedere un preventivo per un impianto.")}`;
+const WA_URL = `https://wa.me/390690069123?text=${encodeURIComponent("Buongiorno, vorrei richiedere un preventivo per un impianto.")}`;
 
 export default function WhatsAppButton() {
   const [hovered, setHovered] = useState(false);

@@ -4,9 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
 const stats = [
-  { n: 30,  s: "+",   label: "Anni di esperienza",  sub: "Dal 1994" },
+  { n: 30,  s: "+",   label: "Anni di esperienza",  sub: "Dal 1990" },
   { n: 500, s: "+",   label: "Impianti realizzati",  sub: "Civili, ind., osped." },
-  { n: 2,   s: " MW", label: "Fotovoltaico inst.",   sub: "Energia rinnovabile" },
+  { n: 1,   s: " MW", label: "Fotovoltaico inst.",   sub: "Energia rinnovabile" },
   { n: 98,  s: "%",   label: "Clienti soddisfatti",  sub: "Tasso rinnovo contratti" },
 ];
 

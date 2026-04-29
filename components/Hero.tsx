@@ -35,7 +35,7 @@ export default function Hero() {
           className="badge mb-8"
         >
           <span className="h-1.5 w-1.5 rounded-full bg-[#8DC63F] animate-pulse" />
-          Monterotondo, Roma — Est. 1994
+          Monterotondo, Roma — Est. 1990
         </motion.div>
 
         {/* Logo */}
@@ -64,9 +64,9 @@ export default function Hero() {
           transition={{ duration: 0.65, delay: 0.22, ease: [0.23, 1, 0.32, 1] }}
           className="mb-10 max-w-xl text-[17px] leading-relaxed text-[#64748B]"
         >
-          Progettazione, installazione e manutenzione di impianti elettrici civili,
-          industriali e ospedalieri. Fotovoltaico, domotica e sicurezza.{" "}
-          <span className="text-[#0F1117] font-semibold">Clienti istituzionali in tutta Italia.</span>
+          Impianti elettrici, cabine MT/BT, fotovoltaico, condizionamento, termoidraulica,
+          domotica, antintrusione, videosorveglianza e antincendio.{" "}
+          <span className="text-[#0F1117] font-semibold">Dalla progettazione alla manutenzione, un solo partner.</span>
         </motion.p>
 
         {/* CTAs */}

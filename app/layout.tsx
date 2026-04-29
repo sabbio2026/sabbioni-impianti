@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | Sabbioni Impianti S.R.L.",
   },
   description:
-    "Impiantistica a Roma e nel Lazio dal 1994. Impianti elettrici civili, industriali e ospedalieri, fotovoltaico, condizionamento e termoidraulica. Certificazione OS30 SOA. Preventivo gratuito.",
+    "Impiantistica a Roma e nel Lazio dal 1990. Impianti elettrici civili, industriali e ospedalieri, fotovoltaico, condizionamento e termoidraulica. Certificazione SOA OS30. Preventivo gratuito.",
   keywords: [
     "impiantistica Lazio",
     "impiantista Lazio",
@@ -53,13 +53,13 @@ export const metadata: Metadata = {
     siteName: "Sabbioni Impianti S.R.L.",
     title: "Impiantistica Lazio | Sabbioni Impianti S.R.L. — Monterotondo, Roma",
     description:
-      "Impiantistica a Roma e nel Lazio dal 1994. Impianti elettrici, fotovoltaico, condizionamento, termoidraulica. OS30 SOA. Clienti: Policlinico Gemelli, Università La Sapienza. Preventivo gratuito.",
+      "Impiantistica a Roma e nel Lazio dal 1990. Impianti elettrici, fotovoltaico, condizionamento, termoidraulica. SOA OS30. Clienti: Policlinico Gemelli, Università La Sapienza. Preventivo gratuito.",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Sabbioni Impianti S.R.L. — Impiantistica Lazio" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Impiantistica Lazio | Sabbioni Impianti S.R.L.",
-    description: "Impianti elettrici, fotovoltaico e termoidraulica nel Lazio dal 1994. OS30 SOA. Preventivo gratuito.",
+    description: "Impiantistica e termoidraulica nel Lazio dal 1990. OS30 SOA. Preventivo gratuito.",
     images: ["/og-image.jpg"],
   },
   alternates: { canonical: BASE_URL },
@@ -75,9 +75,9 @@ const schema = {
       name: "Sabbioni Impianti S.R.L.",
       legalName: "Sabbioni Impianti S.R.L.",
       url: BASE_URL,
-      telephone: "+39-370-364-0131",
+      telephone: "+39-06-900-69-123",
       email: "marzia@sabbioniimpianti.it",
-      foundingDate: "1994",
+      foundingDate: "1990",
       priceRange: "€€",
       currenciesAccepted: "EUR",
       paymentAccepted: "Bonifico bancario, Assegno",
@@ -87,7 +87,7 @@ const schema = {
       },
       image: `${BASE_URL}/og-image.jpg`,
       description:
-        "Sabbioni Impianti S.R.L. — impiantistica elettrica, fotovoltaico, condizionamento e termoidraulica nel Lazio dal 1994. Certificazione OS30 SOA, F-GAS. Clienti istituzionali in tutta Italia.",
+        "Sabbioni Impianti S.R.L. — impiantistica elettrica, fotovoltaico, condizionamento e termoidraulica nel Lazio dal 1990. Certificazione SOA OS30, F-GAS. Clienti istituzionali in tutta Italia.",
       address: {
         "@type": "PostalAddress",
         streetAddress: "Via Salaria 108D",
@@ -140,11 +140,8 @@ const schema = {
         "Sistemi fotovoltaici BESS",
         "VRF multi-split",
         "KNX BACnet",
-        "Certificazione OS30 SOA",
+        "Certificazione SOA OS30",
         "F-GAS",
-        "CEI 64-8",
-        "CEI 11-27",
-        "ISO 9001",
       ],
       numberOfEmployees: { "@type": "QuantitativeValue", minValue: 10 },
     },
@@ -153,7 +150,7 @@ const schema = {
       "@id": `${BASE_URL}/#website`,
       url: BASE_URL,
       name: "Sabbioni Impianti S.R.L.",
-      description: "Impiantistica nel Lazio dal 1994",
+      description: "Impiantistica nel Lazio dal 1990",
       inLanguage: "it-IT",
       publisher: { "@id": `${BASE_URL}/#business` },
       potentialAction: {

@@ -96,7 +96,7 @@ export default function Clients() {
           <div className="flex items-center gap-2 text-xs text-[#94A3B8] mr-2">
             <ShieldCheck size={14} className="text-[#8DC63F]" /> Certificazioni
           </div>
-          {["OS30 SOA","F-GAS","CEI 64-8","CEI 11-27","ISO 9001","UNI 11224"].map(c => (
+          {['OS30 SOA','F-GAS'].map(c => (
             <div key={c} className="s-card flex items-center gap-2 rounded-xl px-4 py-2">
               <span className="text-sm font-bold text-[#1A1F6B]">{c}</span>
             </div>

@@ -22,8 +22,8 @@ export default function Footer() {
               civile, industriale e ospedaliero. Monterotondo, Roma.
             </p>
             <div className="flex flex-col gap-2">
-              <a href="tel:+393703640131" className="flex items-center gap-2 text-white/40 hover:text-[#8DC63F] text-sm transition-colors">
-                <Phone size={12} />+39 370 364 0131
+              <a href="tel:+390690069123" className="flex items-center gap-2 text-white/40 hover:text-[#8DC63F] text-sm transition-colors">
+                <Phone size={12} />+39 06 900 69 123
               </a>
               <a href="mailto:marzia@sabbioniimpianti.it" className="flex items-center gap-2 text-white/40 hover:text-[#8DC63F] text-sm transition-colors">
                 <Mail size={12} />marzia@sabbioniimpianti.it
@@ -72,7 +72,7 @@ export default function Footer() {
               </a>
             </div>
             <div className="flex flex-wrap gap-1.5">
-              {["OS30","F-GAS","CEI 64-8","ISO 9001"].map(c => (
+              {['OS30','F-GAS'].map(c => (
                 <span key={c} className="text-xs text-[#8DC63F] border border-[#8DC63F]/20 px-2.5 py-1 rounded-lg bg-[#8DC63F]/8 font-semibold">{c}</span>
               ))}
             </div>
@@ -80,7 +80,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/[0.08] pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
-          <p className="text-white/25 text-xs">© {new Date().getFullYear()} Sabbioni Impianti S.R.L. — P.IVA IT00000000000</p>
+          <p className="text-white/25 text-xs">© {new Date().getFullYear()} Sabbioni Impianti S.R.L. — P.IVA 13649651000</p>
           <div className="flex gap-4">
             {["Privacy Policy","Cookie Policy","Note Legali"].map(t => (
               <a key={t} href="#" className="text-white/20 hover:text-white/45 text-xs transition-colors">{t}</a>

@@ -2,18 +2,14 @@
 
 import { useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { MapPin, Building2, Sun, Zap } from "lucide-react";
+import { MapPin, Building2 } from "lucide-react";
 
 const E = [0.23, 1, 0.32, 1] as const;
-const cats = ["Tutti","Ospedaliero","Universitario","Industriale","Fotovoltaico"];
+const cats = ["Tutti","Ospedaliero","Universitario"];
 
 const projects = [
   { id:1, n:"01", title:"Policlinico Universitario Gemelli",  sub:"Impianti Elettrici MT/BT — Blocco Operatorio",   loc:"Roma",   cat:"Ospedaliero",  icon:Building2, tags:["500 kVA","UPS 200 kVA","EVAC System","Impianto Terre"], color:"#8DC63F" },
   { id:2, n:"02", title:"Università La Sapienza",             sub:"Impianti Speciali — 12 Edifici Campus",          loc:"Roma",   cat:"Universitario",icon:Building2, tags:["350 IP Cam","Accessi","BMS","Fire Detect."], color:"#4A90D9" },
-  { id:3, n:"03", title:"Polo Fotovoltaico Industriale",      sub:"Ground-Mounted 800 kWp + BESS 400 kWh",         loc:"Lazio",  cat:"Fotovoltaico", icon:Sun,       tags:["800 kWp","BESS 400 kWh","IoT","1.100 MWh/a"], color:"#F97316" },
-  { id:4, n:"04", title:"Stabilimento Manifatturiero",        sub:"Cabina MT/BT — Automazione Linea Produttiva",   loc:"Rieti",  cat:"Industriale",  icon:Zap,       tags:["2 MVA","Cabina MT","PLC","Forza Motrice"], color:"#F59E0B" },
-  { id:5, n:"05", title:"Ospedale San Giovanni",              sub:"Fire Detection AI — Evacuazione Vocale",        loc:"Roma",   cat:"Ospedaliero",  icon:Building2, tags:["AI Fire","450 zone","EVAC Voce","UNI EN 54"], color:"#EF4444" },
-  { id:6, n:"06", title:"Parco Fotovoltaico Comunale",        sub:"Energia Rinnovabile P.A. — Incentivo GSE",     loc:"Viterbo",cat:"Fotovoltaico", icon:Sun,       tags:["200 kWp","GSE","O&M","-140 t CO₂/a"], color:"#8DC63F" },
 ];
 
 export default function Projects() {

@@ -7,10 +7,10 @@ import { Phone, Mail, MapPin, Clock, Send, CheckCircle, ArrowRight } from "lucid
 const E = [0.23, 1, 0.32, 1] as const;
 
 const info = [
-  { icon: Phone,  label: "Telefono", val: "+39 370 364 0131",          sub: "Lun–Ven 08:00–18:00", href: "tel:+393703640131",                  c: "#8DC63F" },
+  { icon: Phone,  label: "Telefono", val: "+39 06 900 69 123",          sub: "Lun–Ven 08:00–18:00", href: "tel:+390690069123",              c: "#8DC63F" },
   { icon: Mail,   label: "Email",    val: "marzia@sabbioniimpianti.it",  sub: "Risposta entro 24h",  href: "mailto:marzia@sabbioniimpianti.it",  c: "#4A90D9" },
   { icon: MapPin, label: "Sede",     val: "Via Salaria 108D",            sub: "00015 Monterotondo (RM)", href: "https://maps.google.com/?q=Via+Salaria+108D+Monterotondo+Roma", c: "#F97316" },
-  { icon: Clock,  label: "Orari",    val: "Lun–Ven 08:00–18:00",        sub: "Emergenze: H24",      href: "#",                                  c: "#A855F7" },
+  { icon: Clock,  label: "Orari",    val: "Lun–Ven 08:00–18:00",        sub: "Servizi su appuntamento", href: "#",                              c: "#A855F7" },
 ];
 
 const svcs = ["Impianti elettrici civili","Impianti industriali","Impianti ospedalieri","Fotovoltaico","Condizionamento","Termoidraulica","Domotica & Sicurezza","Manutenzione"];
@@ -96,12 +96,20 @@ export default function Contact() {
 
             <motion.div initial={{ opacity: 0, y: 10 }} animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: 0.42, ease: E }}
-              className="rounded-xl border border-[#8DC63F]/25 bg-[#8DC63F]/6 p-4">
-              <p className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.12em] text-[#5A9222]">Emergenza impianti?</p>
-              <p className="mb-3 text-sm text-[#64748B]">Pronto intervento H24 per guasti e urgenze.</p>
-              <a href="tel:+393703640131" className="btn-primary rounded-lg px-4 py-2.5 text-sm">
-                <Phone size={14} /> Chiama ora
-              </a>
+              className="rounded-xl border border-[#8DC63F]/25 bg-[#F7F9FC] p-4">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+                <div className="flex-shrink-0">
+                  <svg viewBox="0 0 56 56" className="h-12 w-12" aria-label="Deutsche Bank" role="img">
+                    <rect width="56" height="56" rx="8" fill="#0018A8" />
+                    <path d="M14 42 L42 14" stroke="white" strokeWidth="9" strokeLinecap="square" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.12em] text-[#5A9222]">Finanziamento</p>
+                  <p className="text-sm font-semibold text-[#0F1117]">Possibilità di finanziamento con Deutsche Bank</p>
+                  <p className="mt-1 text-sm text-[#64748B]">Richiedi un progetto con supporto finanziario dedicato al tuo impianto.</p>
+                </div>
+              </div>
             </motion.div>
           </motion.div>
 
@@ -140,7 +148,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <label className={labelCls}>Telefono *</label>
-                      <input type="tel" name="phone" required placeholder="+39 370 364 0131"
+                      <input type="tel" name="phone" required placeholder="+39 06 900 69 123"
                         value={form.phone} onChange={onChange} className={inputCls} />
                     </div>
                     <div>
