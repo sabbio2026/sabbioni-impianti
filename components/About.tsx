@@ -8,7 +8,7 @@ const E = [0.23, 1, 0.32, 1] as const;
 
 const timeline = [
   { y: "1990", t: "Elettrica Romana Nord S.R.L.", d: "Fondata nel 1990, diventa punto di riferimento per impianti elettrici civili e industriali a Roma." },
-  { y: "2016", t: "Fotovoltaico e idraulica",     d: "Dal 2016 ampliamo i servizi con impianti fotovoltaici e idraulici per il mercato residenziale e commerciale." },
+  { y: "2016", t: "Fondazione Sabbioni Impianti",  d: "Nasce Sabbioni Impianti S.R.L. con l'ampliamento dei servizi agli impianti fotovoltaici e idraulici per il mercato residenziale e commerciale." },
   { y: "2023", t: "Espansione e SOA OS30",         d: "Certificazione SOA OS30 ottenuta per operare su grandi commesse e appalti pubblici." },
 ];
 
