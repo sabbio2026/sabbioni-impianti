@@ -1,0 +1,185 @@
+import type { Metadata } from "next";
+import { Plus_Jakarta_Sans } from "next/font/google";
+import "./globals.css";
+
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-jakarta",
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
+});
+
+const BASE_URL = "https://www.sabbioniimpianti.it";
+
+export const metadata: Metadata = {
+  metadataBase: new URL(BASE_URL),
+  title: {
+    default: "Impiantistica Lazio | Sabbioni Impianti S.R.L. — Monterotondo, Roma",
+    template: "%s | Sabbioni Impianti S.R.L.",
+  },
+  description:
+    "Impiantistica a Roma e nel Lazio dal 1994. Impianti elettrici civili, industriali e ospedalieri, fotovoltaico, condizionamento e termoidraulica. Certificazione OS30 SOA. Preventivo gratuito.",
+  keywords: [
+    "impiantistica Lazio",
+    "impiantista Lazio",
+    "impianti elettrici Lazio",
+    "impiantistica Roma",
+    "impianti elettrici Roma",
+    "impianti elettrici Monterotondo",
+    "impianti industriali Lazio",
+    "impianti ospedalieri Roma",
+    "fotovoltaico Lazio",
+    "fotovoltaico Roma",
+    "condizionamento Lazio",
+    "termoidraulica Roma",
+    "domotica Lazio",
+    "impianti civili Roma",
+    "impiantista Monterotondo",
+    "Sabbioni Impianti",
+    "OS30 SOA Lazio",
+  ],
+  authors: [{ name: "Sabbioni Impianti S.R.L." }],
+  creator: "Sabbioni Impianti S.R.L.",
+  publisher: "Sabbioni Impianti S.R.L.",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-snippet": -1, "max-image-preview": "large", "max-video-preview": -1 },
+  },
+  openGraph: {
+    type: "website",
+    locale: "it_IT",
+    url: BASE_URL,
+    siteName: "Sabbioni Impianti S.R.L.",
+    title: "Impiantistica Lazio | Sabbioni Impianti S.R.L. — Monterotondo, Roma",
+    description:
+      "Impiantistica a Roma e nel Lazio dal 1994. Impianti elettrici, fotovoltaico, condizionamento, termoidraulica. OS30 SOA. Clienti: Policlinico Gemelli, Università La Sapienza. Preventivo gratuito.",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Sabbioni Impianti S.R.L. — Impiantistica Lazio" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Impiantistica Lazio | Sabbioni Impianti S.R.L.",
+    description: "Impianti elettrici, fotovoltaico e termoidraulica nel Lazio dal 1994. OS30 SOA. Preventivo gratuito.",
+    images: ["/og-image.jpg"],
+  },
+  alternates: { canonical: BASE_URL },
+  category: "Impiantistica",
+};
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "ElectricalContractor"],
+      "@id": `${BASE_URL}/#business`,
+      name: "Sabbioni Impianti S.R.L.",
+      legalName: "Sabbioni Impianti S.R.L.",
+      url: BASE_URL,
+      telephone: "+39-370-364-0131",
+      email: "marzia@sabbioniimpianti.it",
+      foundingDate: "1994",
+      priceRange: "€€",
+      currenciesAccepted: "EUR",
+      paymentAccepted: "Bonifico bancario, Assegno",
+      logo: {
+        "@type": "ImageObject",
+        url: `${BASE_URL}/logo.svg`,
+      },
+      image: `${BASE_URL}/og-image.jpg`,
+      description:
+        "Sabbioni Impianti S.R.L. — impiantistica elettrica, fotovoltaico, condizionamento e termoidraulica nel Lazio dal 1994. Certificazione OS30 SOA, F-GAS. Clienti istituzionali in tutta Italia.",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Via Salaria 108D",
+        addressLocality: "Monterotondo",
+        addressRegion: "Lazio",
+        postalCode: "00015",
+        addressCountry: "IT",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 42.029,
+        longitude: 12.608,
+      },
+      hasMap: `https://maps.google.com/?q=Via+Salaria+108D+Monterotondo+Roma`,
+      areaServed: [
+        { "@type": "State", name: "Lazio" },
+        { "@type": "City", name: "Roma" },
+        { "@type": "City", name: "Monterotondo" },
+        { "@type": "City", name: "Guidonia Montecelio" },
+        { "@type": "City", name: "Tivoli" },
+        { "@type": "City", name: "Mentana" },
+        { "@type": "City", name: "Fonte Nuova" },
+        { "@type": "City", name: "Rieti" },
+        { "@type": "City", name: "Viterbo" },
+        { "@type": "City", name: "Frosinone" },
+        { "@type": "City", name: "Latina" },
+      ],
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          opens: "08:00",
+          closes: "18:00",
+        },
+      ],
+      serviceType: [
+        "Impianti elettrici civili",
+        "Impianti elettrici industriali",
+        "Impianti elettrici ospedalieri",
+        "Fotovoltaico industriale",
+        "Condizionamento e climatizzazione",
+        "Termoidraulica",
+        "Domotica e building automation",
+        "Videosorveglianza TVCC",
+        "Impianti speciali",
+      ],
+      knowsAbout: [
+        "Impianti BT/MT",
+        "Cabine elettriche",
+        "Sistemi fotovoltaici BESS",
+        "VRF multi-split",
+        "KNX BACnet",
+        "Certificazione OS30 SOA",
+        "F-GAS",
+        "CEI 64-8",
+        "CEI 11-27",
+        "ISO 9001",
+      ],
+      numberOfEmployees: { "@type": "QuantitativeValue", minValue: 10 },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${BASE_URL}/#website`,
+      url: BASE_URL,
+      name: "Sabbioni Impianti S.R.L.",
+      description: "Impiantistica nel Lazio dal 1994",
+      inLanguage: "it-IT",
+      publisher: { "@id": `${BASE_URL}/#business` },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: { "@type": "EntryPoint", urlTemplate: `${BASE_URL}/?s={search_term_string}` },
+        "query-input": "required name=search_term_string",
+      },
+    },
+  ],
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="it" className={jakarta.variable}>
+      <head>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+        <meta name="theme-color" content="#ffffff" />
+        {/* Geo tags per local SEO */}
+        <meta name="geo.region" content="IT-62" />
+        <meta name="geo.placename" content="Monterotondo, Roma, Lazio" />
+        <meta name="geo.position" content="42.0290;12.6080" />
+        <meta name="ICBM" content="42.0290, 12.6080" />
+      </head>
+      <body className="bg-white text-[#0F1117] antialiased overflow-x-hidden">
+        {children}
+      </body>
+    </html>
+  );
+}
