@@ -70,9 +70,6 @@ export default function Navbar() {
               className="hidden md:flex items-center gap-1.5 text-sm text-[#0F1117]/45 hover:text-[#8DC63F] transition-colors">
               <Phone size={13} strokeWidth={2.5} /> +39 06 900 69 123
             </a>
-            <a href="#contatti" onClick={go("#contatti")} className="btn-primary px-5 py-2.5 text-sm hidden md:inline-flex rounded-xl">
-              Preventivo gratuito
-            </a>
             <button onClick={() => setOpen(!open)}
               className="lg:hidden flex h-9 w-9 items-center justify-center rounded-lg border border-black/[0.1] text-[#0F1117]/55 hover:text-[#0F1117] transition-colors">
               {open ? <X size={18} /> : <Menu size={18} />}
@@ -102,9 +99,6 @@ export default function Navbar() {
               <div className="mt-auto flex flex-col gap-3">
                 <a href="tel:+390690069123" className="flex items-center justify-center gap-2 py-3.5 rounded-xl border border-[#8DC63F]/40 text-[#5A9222] font-semibold text-sm">
                   <Phone size={15} /> +39 06 900 69 123
-                </a>
-                <a href="#contatti" onClick={go("#contatti")} className="btn-primary justify-center py-3.5 rounded-xl text-sm">
-                  Richiedi Preventivo
                 </a>
               </div>
             </motion.div>
