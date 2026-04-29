@@ -2,12 +2,12 @@ import { Metadata } from "next";
 import ServicePage from "@/components/ServicePage";
 
 export const metadata: Metadata = {
-  title: "Impianti Fotovoltaici a Roma e Monterotondo",
-  description: "Installazione impianti fotovoltaici con accumulo a Roma, Monterotondo e provincia. Pratiche GSE incluse. Oltre 30 anni di esperienza. Richiedi un sopralluogo gratuito.",
+  title: "Impianti Fotovoltaici in tutto il Centro Italia",
+  description: "Installazione impianti fotovoltaici con accumulo in tutto il Centro Italia. Pratiche GSE incluse. Oltre 30 anni di esperienza. Operiamo in Lazio, Umbria, Toscana, Marche e Abruzzo. Richiedi un sopralluogo gratuito.",
   alternates: { canonical: "https://www.sabbioniimpianti.it/servizi/fotovoltaico" },
   openGraph: {
-    title: "Impianti Fotovoltaici a Roma e Monterotondo | Sabbioni Impianti",
-    description: "Installazione fotovoltaico con accumulo a Roma e Monterotondo. Pratiche GSE incluse. Richiedi sopralluogo gratuito.",
+    title: "Impianti Fotovoltaici in tutto il Centro Italia | Sabbioni Impianti",
+    description: "Installazione fotovoltaico con accumulo in tutto il Centro Italia. Pratiche GSE incluse. Richiedi sopralluogo gratuito.",
     url: "https://www.sabbioniimpianti.it/servizi/fotovoltaico",
   },
 };
@@ -28,8 +28,8 @@ export default function Page() {
     <ServicePage data={{
       badge: "Fotovoltaico",
       title: "Impianti fotovoltaici con accumulo",
-      titleHighlight: "a Roma e Monterotondo",
-      subtitle: "Installiamo impianti fotovoltaici per abitazioni e aziende nell'area di Roma e Monterotondo. Dalla progettazione alle pratiche GSE, dall'installazione al monitoraggio della produzione.",
+      titleHighlight: "in tutto il Centro Italia",
+      subtitle: "Installiamo impianti fotovoltaici per abitazioni e aziende in tutto il Centro Italia. Dalla progettazione alle pratiche GSE, dall'installazione al monitoraggio della produzione.",
       includes: [
         "Analisi dei consumi e dimensionamento impianto",
         "Fornitura e installazione pannelli fotovoltaici",

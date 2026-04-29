@@ -2,12 +2,12 @@ import { Metadata } from "next";
 import ServicePage from "@/components/ServicePage";
 
 export const metadata: Metadata = {
-  title: "Climatizzazione e Condizionamento a Monterotondo Roma",
-  description: "Installazione e manutenzione impianti di climatizzazione a Monterotondo e Roma. Split, VRF, pompe di calore. Patentino F-GAS. Richiedi preventivo gratuito.",
+  title: "Climatizzazione e Condizionamento in tutto il Centro Italia",
+  description: "Installazione e manutenzione impianti di climatizzazione in tutto il Centro Italia. Split, VRF, pompe di calore. Patentino F-GAS. Operiamo in Lazio, Umbria, Toscana, Marche e Abruzzo. Richiedi preventivo gratuito.",
   alternates: { canonical: "https://www.sabbioniimpianti.it/servizi/climatizzazione" },
   openGraph: {
-    title: "Climatizzazione a Monterotondo e Roma | Sabbioni Impianti",
-    description: "Installazione e manutenzione climatizzatori a Monterotondo e Roma. Split, VRF, pompe di calore. F-GAS. Richiedi preventivo.",
+    title: "Climatizzazione in tutto il Centro Italia | Sabbioni Impianti",
+    description: "Installazione e manutenzione climatizzatori in tutto il Centro Italia. Split, VRF, pompe di calore. F-GAS. Richiedi preventivo.",
     url: "https://www.sabbioniimpianti.it/servizi/climatizzazione",
   },
 };
@@ -29,7 +29,7 @@ export default function Page() {
       badge: "Climatizzazione",
       title: "Installazione e manutenzione",
       titleHighlight: "impianti di climatizzazione",
-      subtitle: "Split, VRF, pompe di calore e centrali trattamento aria per residenziale, commerciale e industriale nell'area di Roma e Monterotondo. Tutti i tecnici sono certificati F-GAS.",
+      subtitle: "Split, VRF, pompe di calore e centrali trattamento aria per residenziale, commerciale e industriale in tutto il Centro Italia. Tutti i tecnici sono certificati F-GAS.",
       includes: [
         "Installazione sistemi split e multi-split",
         "Impianti VRF per edifici commerciali e industriali",

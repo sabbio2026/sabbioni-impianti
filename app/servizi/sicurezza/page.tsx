@@ -2,12 +2,12 @@ import { Metadata } from "next";
 import ServicePage from "@/components/ServicePage";
 
 export const metadata: Metadata = {
-  title: "Impianti di Sicurezza a Roma e Monterotondo",
-  description: "Videosorveglianza, antintrusione e antincendio a Roma, Monterotondo e provincia. Installazione e manutenzione sistemi di sicurezza. Richiedi un sopralluogo gratuito.",
+  title: "Impianti di Sicurezza in tutto il Centro Italia",
+  description: "Videosorveglianza, antintrusione e antincendio in tutto il Centro Italia. Installazione e manutenzione sistemi di sicurezza in Lazio, Umbria, Toscana, Marche e Abruzzo. Richiedi un sopralluogo gratuito.",
   alternates: { canonical: "https://www.sabbioniimpianti.it/servizi/sicurezza" },
   openGraph: {
-    title: "Impianti di Sicurezza a Roma e Monterotondo | Sabbioni Impianti",
-    description: "Videosorveglianza, antintrusione e antincendio a Roma e Monterotondo. Richiedi sopralluogo gratuito.",
+    title: "Impianti di Sicurezza in tutto il Centro Italia | Sabbioni Impianti",
+    description: "Videosorveglianza, antintrusione e antincendio in tutto il Centro Italia. Richiedi sopralluogo gratuito.",
     url: "https://www.sabbioniimpianti.it/servizi/sicurezza",
   },
 };
@@ -28,8 +28,8 @@ export default function Page() {
     <ServicePage data={{
       badge: "Impianti di Sicurezza",
       title: "Videosorveglianza, antintrusione",
-      titleHighlight: "e antincendio a Roma",
-      subtitle: "Progettiamo e installiamo sistemi di sicurezza per abitazioni, attività commerciali e strutture industriali nell'area di Roma, Monterotondo e provincia.",
+      titleHighlight: "e antincendio nel Centro Italia",
+      subtitle: "Progettiamo e installiamo sistemi di sicurezza per abitazioni, attività commerciali e strutture industriali in tutto il Centro Italia.",
       includes: [
         "Videosorveglianza IP con visione da remoto",
         "Sistemi antintrusione con centrale e sensori",

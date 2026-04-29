@@ -2,12 +2,12 @@ import { Metadata } from "next";
 import ServicePage from "@/components/ServicePage";
 
 export const metadata: Metadata = {
-  title: "Manutenzione Impianti a Roma e Monterotondo",
-  description: "Manutenzione ordinaria e straordinaria di impianti elettrici, meccanici e di climatizzazione a Roma e Monterotondo. Contratti programmati per aziende e condomìni. Richiedi preventivo.",
+  title: "Manutenzione Impianti in tutto il Centro Italia",
+  description: "Manutenzione ordinaria e straordinaria di impianti elettrici, meccanici e di climatizzazione in tutto il Centro Italia. Contratti programmati per aziende e condomìni. Operiamo in Lazio, Umbria, Toscana, Marche e Abruzzo. Richiedi preventivo.",
   alternates: { canonical: "https://www.sabbioniimpianti.it/servizi/manutenzione" },
   openGraph: {
-    title: "Manutenzione Impianti a Roma e Monterotondo | Sabbioni Impianti",
-    description: "Manutenzione impianti elettrici e meccanici a Roma e Monterotondo. Contratti programmati. Richiedi preventivo.",
+    title: "Manutenzione Impianti in tutto il Centro Italia | Sabbioni Impianti",
+    description: "Manutenzione impianti elettrici e meccanici in tutto il Centro Italia. Contratti programmati. Richiedi preventivo.",
     url: "https://www.sabbioniimpianti.it/servizi/manutenzione",
   },
 };
@@ -28,8 +28,8 @@ export default function Page() {
     <ServicePage data={{
       badge: "Manutenzione",
       title: "Manutenzione impianti elettrici",
-      titleHighlight: "e meccanici a Roma",
-      subtitle: "Manutenzione ordinaria e straordinaria su impianti elettrici, cabine MT/BT e impianti di climatizzazione. Contratti programmati per aziende, condomìni e strutture commerciali nell'area di Roma e Monterotondo.",
+      titleHighlight: "e meccanici nel Centro Italia",
+      subtitle: "Manutenzione ordinaria e straordinaria su impianti elettrici, cabine MT/BT e impianti di climatizzazione. Contratti programmati per aziende, condomìni e strutture commerciali in tutto il Centro Italia.",
       includes: [
         "Manutenzione ordinaria programmata",
         "Verifiche periodiche impianti elettrici",

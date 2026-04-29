@@ -45,7 +45,7 @@ export default function Hero() {
         >
           <span className="text-[#0F1117]">Impianti tecnici</span>
           <br />
-          <span className="grad-lime">a Monterotondo e Roma</span>
+          <span className="grad-lime">in tutto il Centro Italia</span>
         </motion.h1>
 
         {/* Subtitle */}
@@ -55,7 +55,7 @@ export default function Hero() {
           className="mb-10 max-w-xl text-[17px] leading-relaxed text-[#64748B]"
         >
           Dal 1990 installiamo impianti per abitazioni, aziende, attività commerciali e condomìni
-          nell&apos;area di Roma e Monterotondo.{" "}
+          in tutto il Centro Italia.{" "}
           <span className="text-[#0F1117] font-semibold">Dalla progettazione al collaudo, un unico interlocutore.</span>
         </motion.p>
 

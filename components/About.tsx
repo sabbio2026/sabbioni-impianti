@@ -41,7 +41,7 @@ export default function About() {
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-[#64748B]">
             Dal 1990 installiamo e manteniamo impianti per privati, aziende e strutture pubbliche
-            nell&apos;area di Roma e provincia. Un unico interlocutore, senza subappalti sulle fasi critiche.
+            in tutto il Centro Italia. Un unico interlocutore, senza subappalti sulle fasi critiche.
           </p>
         </motion.div>
 
@@ -57,8 +57,8 @@ export default function About() {
               Sabbioni Impianti raccoglie l&apos;esperienza iniziata nel 1990 con Elettrica Romana Nord S.R.L.
               Nel 2016 abbiamo ampliato i servizi agli impianti fotovoltaici e idraulici.
               Nel 2023 abbiamo ottenuto la certificazione SOA OS30 per grandi commesse e appalti pubblici.
-              Seguiamo ogni progetto internamente — dalla progettazione all&apos;installazione fino alla manutenzione —
-              mantenendo un rapporto diretto con il cliente per tutta la durata del cantiere.
+              Operiamo in tutto il Centro Italia — Lazio, Umbria, Toscana, Marche, Abruzzo —
+              seguendo ogni progetto internamente, dalla progettazione all&apos;installazione fino alla manutenzione.
             </p>
 
             <p className="mb-5 text-xs font-bold tracking-[0.15em] uppercase text-[#5A9222]">Come lavoriamo</p>

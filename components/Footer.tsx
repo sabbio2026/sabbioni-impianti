@@ -26,8 +26,8 @@ export default function Footer() {
           <div>
             <Image src="/logo.svg" alt="Sabbioni Impianti S.R.L." width={140} height={50} className="h-9 w-auto mb-5 brightness-0 invert" />
             <p className="text-white/40 text-sm leading-relaxed mb-5">
-              Oltre 30 anni di esperienza in soluzioni impiantistiche per il settore
-              civile, industriale e ospedaliero. Monterotondo, Roma.
+              Oltre 30 anni di esperienza in impianti elettrici, fotovoltaico,
+              climatizzazione e manutenzione. Operiamo in tutto il Centro Italia.
             </p>
             <div className="flex flex-col gap-2">
               <a href="tel:+390690069123" className="flex items-center gap-2 text-white/40 hover:text-[#8DC63F] text-sm transition-colors">

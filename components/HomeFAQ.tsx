@@ -1,7 +1,7 @@
 import FAQAccordion from "@/components/FAQAccordion";
 
 const faqs = [
-  { q: "In quali zone operate?", a: "Operiamo su Roma, Monterotondo e provincia, Guidonia Montecelio, Mentana, Fonte Nuova, Tivoli e la provincia di Rieti." },
+  { q: "In quali zone operate?", a: "Operiamo in tutto il Centro Italia: Lazio, Umbria, Toscana, Marche e Abruzzo. La sede è a Monterotondo (Roma), ma seguiamo commesse su tutto il territorio del Centro Italia." },
   { q: "Fate sopralluoghi gratuiti?", a: "Sì. Il sopralluogo tecnico è gratuito e senza impegno. Preferiamo sempre vedere il lavoro di persona prima di fare un preventivo." },
   { q: "Lavorate solo per privati?", a: "No. Lavoriamo per privati, aziende, attività commerciali, condomìni e strutture pubbliche. Tra i nostri clienti ci sono strutture ospedaliere, universitarie e del Ministero della Difesa." },
   { q: "Quanti anni di esperienza avete?", a: "Oltre 30 anni. L'attività nasce nel 1990 con Elettrica Romana Nord S.R.L. e si è evoluta in Sabbioni Impianti S.R.L. Nel 2023 abbiamo ottenuto la certificazione SOA OS30." },
