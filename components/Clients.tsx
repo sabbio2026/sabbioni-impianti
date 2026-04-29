@@ -7,8 +7,21 @@ import { Star, Quote, ShieldCheck } from "lucide-react";
 const E = [0.23, 1, 0.32, 1] as const;
 
 const clients = [
-  { name: "Policlinico Gemelli",      sector: "Ospedaliero" },
-  { name: "Università La Sapienza",   sector: "Universitario" },
+  { name: "Policlinico Gemelli",                      sector: "Ospedaliero" },
+  { name: "Università La Sapienza",                   sector: "Universitario" },
+  { name: "C.C.C. Costruzioni Civili Cerasi S.p.A.", sector: "Costruzioni" },
+  { name: "Gruppo CTY S.r.l.",                        sector: "Industriale" },
+  { name: "Centro Polifunzionale di Sperimentazione", sector: "Difesa" },
+  { name: "Ministero della Difesa",                   sector: "P.A. / Difesa" },
+  { name: "Scuola Interforze NBC Rieti",               sector: "Difesa" },
+  { name: "Comando Legione Carabinieri Lazio",         sector: "Sicurezza" },
+  { name: "AVC S.r.l.",                               sector: "Industriale" },
+  { name: "Perfect Car",                              sector: "Commerciale" },
+  { name: "Sales S.p.A.",                             sector: "Industriale" },
+  { name: "Pontificio Ateneo Salesiano",              sector: "Istruzione" },
+  { name: "Comune di Scandriglia",                    sector: "Pubblica Amm." },
+  { name: "Comune di Nerola",                         sector: "Pubblica Amm." },
+  { name: "Simmetrico Group S.r.l.",                  sector: "Industriale" },
 ];
 
 const testimonials = [
