@@ -28,16 +28,6 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-10 pt-24 pb-16 md:pt-28 md:pb-20 flex flex-col items-center text-center">
 
-        {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
-          className="badge mb-8"
-        >
-          <span className="h-1.5 w-1.5 rounded-full bg-[#8DC63F] animate-pulse" />
-          Monterotondo, Roma — Est. 1990
-        </motion.div>
-
         {/* Logo */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}
