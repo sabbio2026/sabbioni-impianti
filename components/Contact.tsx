@@ -21,15 +21,29 @@ export default function Contact() {
   const [form, setForm] = useState({ name:"", company:"", phone:"", email:"", service:"", message:"", privacy: false });
   const [sent, setSent] = useState(false);
   const [busy, setBusy] = useState(false);
+  const [error, setError] = useState("");
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement|HTMLTextAreaElement|HTMLSelectElement>) => {
     const { name, value, type } = e.target;
     setForm(p => ({ ...p, [name]: type === "checkbox" ? (e.target as HTMLInputElement).checked : value }));
   };
   const onSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(); setBusy(true);
-    await new Promise(r => setTimeout(r, 1100));
-    setBusy(false); setSent(true);
+    e.preventDefault();
+    setBusy(true);
+    setError("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error();
+      setSent(true);
+    } catch {
+      setError("Errore nell'invio. Riprova o contattaci per telefono.");
+    } finally {
+      setBusy(false);
+    }
   };
 
   const inputCls = "w-full rounded-xl border border-black/[0.1] bg-[#F7F9FC] px-4 py-3 text-sm text-[#0F1117] placeholder-[#94A3B8] transition-all";
@@ -160,6 +174,9 @@ export default function Contact() {
                     </label>
                   </div>
 
+                  {error && (
+                    <p className="mb-4 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-600">{error}</p>
+                  )}
                   <button type="submit" disabled={busy}
                     className="btn-primary w-full justify-center rounded-xl py-4 disabled:opacity-60">
                     {busy
