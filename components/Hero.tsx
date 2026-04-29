@@ -32,7 +32,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.55, delay: 0.05, ease: [0.23, 1, 0.32, 1] }}
-          className="mb-8"
+          className="mb-8 flex justify-center"
         >
           <Image src="/logo.svg" alt="Sabbioni Impianti S.R.L." width={280} height={100} priority className="h-16 w-auto" />
         </motion.div>
