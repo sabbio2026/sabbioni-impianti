@@ -8,22 +8,22 @@ const E = [0.23, 1, 0.32, 1] as const;
 
 const svc = [
   { icon: Zap,      title: "Impianti Elettrici",  sub: "Civili · Industriali · Ospedalieri", color: "#8DC63F",
-    desc: "Progettazione e realizzazione impianti BT/MT per ogni tipologia, incluse sale operatorie e ambienti ad alta criticità.",
+    desc: "Progettiamo e realizziamo impianti elettrici civili e industriali: quadri BT/MT, forza motrice, illuminazione. Interveniamo su nuove costruzioni, ristrutturazioni e adeguamenti normativi.",
     tags: ["Cabine MT/BT", "Quadri BT", "Forza Motrice", "BUS Management"] },
   { icon: Shield,   title: "Impianti Speciali",   sub: "Sicurezza · TVCC · Antincendio",      color: "#4A90D9",
-    desc: "Videosorveglianza IP 4K, antintrusione, controllo accessi, antincendio e antenne TV-SAT per ambienti civili e industriali.",
+    desc: "Progettiamo e installiamo sistemi di videosorveglianza IP, antintrusione, controllo accessi e rilevazione incendi per edifici residenziali, commerciali e industriali, secondo normativa vigente.",
     tags: ["TVCC 4K", "Antintrusione", "Antincendio", "Antenne TV-SAT"] },
   { icon: Wind,     title: "Condizionamento",      sub: "Climatizzazione · VRF · AHU",        color: "#06B6D4",
-    desc: "Sistemi VRF multi-split, centrali trattamento aria e free-cooling ad alta efficienza energetica. Certificazione F-GAS.",
+    desc: "Installiamo e manteniamo sistemi di climatizzazione per residenziale, commerciale e industriale: split, VRF multi-split, AHU e pompe di calore. Operiamo con patentino F-GAS.",
     tags: ["VRF Multi-split", "AHU", "Free-cooling", "F-GAS Cert."] },
   { icon: Droplets, title: "Termoidraulica",       sub: "Riscaldamento · Idraulica",           color: "#F59E0B",
-    desc: "Impianti di riscaldamento, distribuzione fluidi e sanitaria industriale. Pompe di calore e pannelli radianti.",
+    desc: "Impianti di riscaldamento, distribuzione idrica e sanitaria industriale. Pompe di calore e pannelli radianti per residenziale e commerciale ad alta efficienza.",
     tags: ["Pompe di calore", "Pannelli Radianti", "Distribuzione", "Sanitaria Ind."] },
   { icon: Sun,      title: "Fotovoltaico",          sub: "Solare · Storage · IoT",             color: "#F97316",
-    desc: "Impianti fotovoltaici industriali con accumulo BESS, ottimizzatori di potenza e monitoraggio remoto IoT.",
+    desc: "Installiamo impianti fotovoltaici con o senza sistema di accumulo per abitazioni e aziende. Gestiamo progettazione, installazione e pratiche GSE per l&apos;accesso agli incentivi.",
     tags: ["Ottimizzatori", "BESS Storage", "IoT Monitor", "Pratiche GSE"] },
   { icon: Home,     title: "Domotica",              sub: "Smart Building · Automazione",       color: "#A855F7",
-    desc: "Building management con KNX, Z-Wave e app mobile per il controllo intelligente di edifici residenziali e commerciali.",
+    desc: "Automazione degli impianti per edifici residenziali e commerciali: controllo di luci, clima, sicurezza e consumi da smartphone. Protocolli KNX e Z-Wave.",
     tags: ["KNX Protocol", "App Mobile", "Energy Mgmt", "Scene Auto"] },
 ];
 

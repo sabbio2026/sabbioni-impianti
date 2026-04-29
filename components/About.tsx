@@ -2,21 +2,21 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Target, Users, Award, TrendingUp } from "lucide-react";
+import { ClipboardList, FileText, Wrench, Headphones } from "lucide-react";
 
 const E = [0.23, 1, 0.32, 1] as const;
 
 const timeline = [
-  { y: "1990",   t: "Elettrica Romana Nord SRL", d: "Fondata nel 1990, diventa punto di riferimento per impianti elettrici civili e industriali a Roma." },
-  { y: "2016",   t: "Fotovoltaico e idraulica", d: "Dal 2016 ampliamo i servizi con impianti fotovoltaici e idraulici per il mercato residenziale e commerciale." },
-  { y: "2023",   t: "Espansione e SOA OS30", d: "Espansione aziendale con certificazione SOA OS30 per interventi su grandi commesse e appalti pubblici." },
+  { y: "1990", t: "Elettrica Romana Nord S.R.L.", d: "Fondata nel 1990, diventa punto di riferimento per impianti elettrici civili e industriali a Roma." },
+  { y: "2016", t: "Fotovoltaico e idraulica",     d: "Dal 2016 ampliamo i servizi con impianti fotovoltaici e idraulici per il mercato residenziale e commerciale." },
+  { y: "2023", t: "Espansione e SOA OS30",         d: "Certificazione SOA OS30 ottenuta per operare su grandi commesse e appalti pubblici." },
 ];
 
-const values = [
-  { icon: Target,     t: "Precisione",    d: "Ogni progetto gestito con rigore ingegneristico. Zero compromessi sulla qualità." },
-  { icon: Users,      t: "Team esperto",  d: "Tecnici certificati e formazione continua su normative e tecnologie." },
-  { icon: Award,      t: "Certificazioni", d: "SOA OS30, F-GAS. Standard riconosciuti a livello nazionale." },
-  { icon: TrendingUp, t: "Innovazione",   d: "IoT, BIM, Building Automation e monitoraggio remoto su ogni progetto." },
+const steps = [
+  { icon: ClipboardList, t: "Sopralluogo",        d: "Prima di qualsiasi preventivo, veniamo a vedere il lavoro di persona." },
+  { icon: FileText,      t: "Preventivo scritto", d: "Documento chiaro con materiali, tempi e costi. Niente voci vaghe." },
+  { icon: Wrench,        t: "Esecuzione",         d: "Lavoriamo con personale interno. Consegniamo tutta la documentazione tecnica al termine." },
+  { icon: Headphones,    t: "Assistenza",         d: "Disponibili per manutenzione e assistenza successiva ai lavori eseguiti." },
 ];
 
 export default function About() {
@@ -35,13 +35,13 @@ export default function About() {
           transition={{ duration: 0.55, ease: E }}>
           <div className="badge mb-5">Chi Siamo</div>
           <h2 className="mx-auto max-w-2xl text-[clamp(30px,4.5vw,52px)] font-extrabold leading-[1.08] tracking-[-0.03em]">
-            <span className="text-[#0F1117]">30 anni di esperienza</span>
+            <span className="text-[#0F1117]">Trent&apos;anni di lavoro</span>
             <br />
-            <span className="grad-lime">un solo partner</span>
+            <span className="grad-lime">sul campo</span>
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-[#64748B]">
-            Sabbioni Impianti S.R.L. nasce per soddisfare interamente le necessità dei propri clienti
-            nell&apos;intero settore impiantistico, senza doversi rivolgere a svariate figure professionali.
+            Dal 1990 installiamo e manteniamo impianti per privati, aziende e strutture pubbliche
+            nell&apos;area di Roma e provincia. Un unico interlocutore, senza subappalti sulle fasi critiche.
             Sede: <strong className="text-[#0F1117] font-semibold">Via Salaria 108D, Monterotondo (Roma)</strong>.
           </p>
         </motion.div>
@@ -55,14 +55,16 @@ export default function About() {
             transition={{ duration: 0.65, ease: E }}
           >
             <p className="mb-7 text-base leading-relaxed text-[#64748B]">
-              La Sabbioni Impianti SRL raccoglie l'esperienza iniziata nel 1990 con Elettrica Romana Nord SRL
-              e consolida il servizio con impianti fotovoltaici e idraulici dal 2016.
-              L&apos;azienda segue tutti i processi — dalla progettazione all&apos;installazione fino alla manutenzione —
-              instaurando un rapporto duraturo con i clienti, basato su fiducia e puntualità.
+              Sabbioni Impianti raccoglie l&apos;esperienza iniziata nel 1990 con Elettrica Romana Nord S.R.L.
+              Nel 2016 abbiamo ampliato i servizi agli impianti fotovoltaici e idraulici.
+              Nel 2023 abbiamo ottenuto la certificazione SOA OS30 per grandi commesse e appalti pubblici.
+              Seguiamo ogni progetto internamente — dalla progettazione all&apos;installazione fino alla manutenzione —
+              mantenendo un rapporto diretto con il cliente per tutta la durata del cantiere.
             </p>
 
+            <p className="mb-5 text-xs font-bold tracking-[0.15em] uppercase text-[#5A9222]">Come lavoriamo</p>
             <div className="grid grid-cols-2 gap-3">
-              {values.map((v, i) => (
+              {steps.map((v, i) => (
                 <motion.div key={v.t}
                   initial={{ opacity: 0, y: 14 }} animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.4, delay: 0.2 + i * 0.08, ease: E }}

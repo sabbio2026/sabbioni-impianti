@@ -43,9 +43,9 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.12, ease: [0.23, 1, 0.32, 1] }}
           className="mb-6 max-w-4xl text-[clamp(36px,6.5vw,80px)] font-extrabold leading-[1.06] tracking-[-0.03em]"
         >
-          <span className="text-[#0F1117]">Impianti avanzati</span>
+          <span className="text-[#0F1117]">Impianti tecnici</span>
           <br />
-          <span className="grad-lime">per il futuro dell&apos;energia</span>
+          <span className="grad-lime">a Monterotondo e Roma</span>
         </motion.h1>
 
         {/* Subtitle */}
@@ -54,9 +54,9 @@ export default function Hero() {
           transition={{ duration: 0.65, delay: 0.22, ease: [0.23, 1, 0.32, 1] }}
           className="mb-10 max-w-xl text-[17px] leading-relaxed text-[#64748B]"
         >
-          Impianti elettrici, cabine MT/BT, fotovoltaico, condizionamento, termoidraulica,
-          domotica, antintrusione, videosorveglianza e antincendio.{" "}
-          <span className="text-[#0F1117] font-semibold">Dalla progettazione alla manutenzione, un solo partner.</span>
+          Dal 1990 installiamo impianti per abitazioni, aziende, attività commerciali e condomìni
+          nell&apos;area di Roma e Monterotondo.{" "}
+          <span className="text-[#0F1117] font-semibold">Dalla progettazione al collaudo, un unico interlocutore.</span>
         </motion.p>
 
         {/* CTAs */}
@@ -66,7 +66,7 @@ export default function Hero() {
           className="mb-14 flex flex-wrap items-center justify-center gap-3"
         >
           <button onClick={() => go("contatti")} className="btn-primary rounded-xl">
-            Richiedi preventivo <ArrowRight size={17} />
+            Richiedi un sopralluogo <ArrowRight size={17} />
           </button>
           <button onClick={() => go("servizi")} className="btn-secondary rounded-xl">
             Scopri i servizi

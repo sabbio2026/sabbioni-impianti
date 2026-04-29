@@ -60,12 +60,12 @@ export default function Contact() {
           transition={{ duration: 0.55, ease: E }}>
           <div className="badge mb-5">Contatti</div>
           <h2 className="text-[clamp(30px,4.5vw,52px)] font-extrabold leading-[1.08] tracking-[-0.03em]">
-            <span className="text-[#0F1117]">Inizia il tuo progetto</span>
+            <span className="text-[#0F1117]">Richiedi un sopralluogo</span>
             <br />
-            <span className="grad-lime">oggi stesso</span>
+            <span className="grad-lime">o un preventivo</span>
           </h2>
           <p className="mt-4 max-w-md text-base leading-relaxed text-[#64748B]">
-            Preventivo gratuito. Risposta tecnica personalizzata entro 24 ore lavorative.
+            Veniamo a vedere il lavoro di persona prima di fare un preventivo. Risposta entro 24 ore lavorative.
           </p>
         </motion.div>
 
@@ -133,7 +133,7 @@ export default function Contact() {
                 </div>
               ) : (
                 <form onSubmit={onSubmit} className="relative z-10">
-                  <h3 className="mb-6 text-lg font-bold text-[#0F1117]">Richiedi preventivo gratuito</h3>
+                  <h3 className="mb-6 text-lg font-bold text-[#0F1117]">Descrivi il tuo progetto</h3>
 
                   <div className="mb-4 grid gap-4 sm:grid-cols-2">
                     <div>
