@@ -60,13 +60,13 @@ export const metadata: Metadata = {
     title: "Impianti Tecnici in tutto il Centro Italia | Sabbioni Impianti S.R.L.",
     description:
       "Impiantistica in tutto il Centro Italia dal 1990. Impianti elettrici, fotovoltaico, condizionamento, termoidraulica. Lazio, Umbria, Toscana, Marche, Abruzzo. SOA OS30. Preventivo gratuito.",
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Sabbioni Impianti S.R.L. — Impiantistica Lazio" }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Sabbioni Impianti S.R.L. — Impiantistica Lazio" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Impianti Tecnici in tutto il Centro Italia | Sabbioni Impianti S.R.L.",
     description: "Impiantistica in tutto il Centro Italia dal 1990. OS30 SOA. Preventivo gratuito.",
-    images: ["/og-image.jpg"],
+    images: ["/opengraph-image"],
   },
   alternates: { canonical: BASE_URL },
   category: "Impiantistica",
@@ -91,7 +91,7 @@ const schema = {
         "@type": "ImageObject",
         url: `${BASE_URL}/logo.svg`,
       },
-      image: `${BASE_URL}/og-image.jpg`,
+      image: `${BASE_URL}/opengraph-image`,
       description:
         "Sabbioni Impianti S.R.L. — impiantistica elettrica, fotovoltaico, condizionamento e termoidraulica nel Lazio dal 1990. Certificazione SOA OS30, F-GAS. Clienti istituzionali in tutta Italia.",
       address: {
