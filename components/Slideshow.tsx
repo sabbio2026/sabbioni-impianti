@@ -36,7 +36,7 @@ const INTERVAL = 4500;
 
 export default function Slideshow() {
   const [index, setIndex] = useState(0);
-  const [dir, setDir] = useState(1);
+  const [dir, setDir]   = useState(1);
   const timer = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const go = useCallback((next: number, direction: number) => {
@@ -44,13 +44,8 @@ export default function Slideshow() {
     setIndex(next);
   }, []);
 
-  const prev = useCallback(() => {
-    go((index - 1 + slides.length) % slides.length, -1);
-  }, [index, go]);
-
-  const next = useCallback(() => {
-    go((index + 1) % slides.length, 1);
-  }, [index, go]);
+  const prev = useCallback(() => go((index - 1 + slides.length) % slides.length, -1), [index, go]);
+  const next = useCallback(() => go((index + 1) % slides.length,  1), [index, go]);
 
   const startTimer = useCallback(() => {
     if (timer.current) clearInterval(timer.current);
@@ -60,43 +55,68 @@ export default function Slideshow() {
     }, INTERVAL);
   }, []);
 
-  useEffect(() => {
-    startTimer();
-    return () => { if (timer.current) clearInterval(timer.current); };
-  }, [startTimer]);
+  useEffect(() => { startTimer(); return () => { if (timer.current) clearInterval(timer.current); }; }, [startTimer]);
 
-  const pause = () => { if (timer.current) clearInterval(timer.current); };
+  const pause  = () => { if (timer.current) clearInterval(timer.current); };
   const resume = () => startTimer();
 
   return (
-    <section id="slideshow" className="relative w-full overflow-hidden bg-[#0A0E1A]" style={{ height: "70vh", minHeight: 420 }}>
+    <section
+      id="galleria"
+      className="relative w-full overflow-hidden bg-[#0A0E1A]"
+      style={{ height: "88vh", minHeight: 500 }}
+    >
+      {/* ── Sfondo sfocato (riempie le bande laterali/superiori) ── */}
+      <AnimatePresence initial={false}>
+        <motion.div
+          key={"bg-" + index}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.6 }}
+          className="absolute inset-0"
+        >
+          <Image
+            src={slides[index].src}
+            alt=""
+            fill
+            className="object-cover blur-2xl scale-110 brightness-30"
+            sizes="100vw"
+            aria-hidden
+          />
+        </motion.div>
+      </AnimatePresence>
 
+      {/* ── Foto principale — intera senza ritagli ── */}
       <AnimatePresence initial={false} custom={dir}>
         <motion.div
-          key={index}
+          key={"img-" + index}
           custom={dir}
           initial={{ opacity: 0, x: dir * 80 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: dir * -80 }}
-          transition={{ duration: 0.7, ease: E }}
-          className="absolute inset-0"
+          transition={{ duration: 0.65, ease: E }}
+          className="absolute inset-0 flex items-center justify-center"
           onMouseEnter={pause}
           onMouseLeave={resume}
         >
-          <Image
-            src={slides[index].src}
-            alt={slides[index].caption}
-            fill
-            className="object-cover"
-            sizes="100vw"
-            priority={index === 0}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-transparent" />
+          <div className="relative w-full h-full">
+            <Image
+              src={slides[index].src}
+              alt={slides[index].caption}
+              fill
+              className="object-contain"
+              sizes="100vw"
+              priority={index === 0}
+            />
+          </div>
+          {/* gradiente solo in basso per caption */}
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/70 to-transparent pointer-events-none" />
         </motion.div>
       </AnimatePresence>
 
       {/* Caption */}
-      <div className="absolute bottom-14 left-0 right-0 flex justify-center pointer-events-none px-6">
+      <div className="absolute bottom-14 left-0 right-0 flex justify-center pointer-events-none px-6 z-10">
         <AnimatePresence mode="wait">
           <motion.p
             key={index}
@@ -104,7 +124,7 @@ export default function Slideshow() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.35, ease: E }}
-            className="text-white/80 text-sm md:text-base font-medium tracking-wide text-center drop-shadow"
+            className="text-white/85 text-sm md:text-base font-medium tracking-wide text-center drop-shadow-lg"
           >
             {slides[index].caption}
           </motion.p>
@@ -112,7 +132,7 @@ export default function Slideshow() {
       </div>
 
       {/* Counter */}
-      <div className="absolute top-4 right-5 z-10 text-white/40 text-xs font-mono tabular-nums">
+      <div className="absolute top-4 right-5 z-10 text-white/40 text-xs font-mono tabular-nums select-none">
         {String(index + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}
       </div>
 
@@ -121,7 +141,7 @@ export default function Slideshow() {
         {slides.map((_, i) => (
           <button
             key={i}
-            onClick={() => go(i, i > index ? 1 : -1)}
+            onClick={() => { go(i, i > index ? 1 : -1); startTimer(); }}
             className={`rounded-full transition-all duration-300 ${
               i === index ? "w-5 h-1.5 bg-[#8DC63F]" : "w-1.5 h-1.5 bg-white/35 hover:bg-white/60"
             }`}
@@ -130,20 +150,20 @@ export default function Slideshow() {
         ))}
       </div>
 
-      {/* Arrows */}
+      {/* Frecce */}
       <button
         onClick={() => { prev(); startTimer(); }}
         className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-black/30 hover:bg-black/60 text-white/70 hover:text-white transition-all duration-200"
         aria-label="Precedente"
       >
-        <ChevronLeft size={28} />
+        <ChevronLeft size={30} />
       </button>
       <button
         onClick={() => { next(); startTimer(); }}
         className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-black/30 hover:bg-black/60 text-white/70 hover:text-white transition-all duration-200"
         aria-label="Successivo"
       >
-        <ChevronRight size={28} />
+        <ChevronRight size={30} />
       </button>
     </section>
   );
