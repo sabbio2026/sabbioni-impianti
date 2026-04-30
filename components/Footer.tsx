@@ -90,8 +90,12 @@ export default function Footer() {
         <div className="border-t border-white/[0.08] pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-white/25 text-xs">© {new Date().getFullYear()} Sabbioni Impianti S.R.L. — P.IVA 13649651000</p>
           <div className="flex gap-4">
-            {["Privacy Policy","Cookie Policy","Note Legali"].map(t => (
-              <a key={t} href="#" className="text-white/20 hover:text-white/45 text-xs transition-colors">{t}</a>
+            {[
+              { label: "Privacy Policy", href: "/privacy-policy" },
+              { label: "Cookie Policy",  href: "/cookie-policy"  },
+              { label: "Note Legali",    href: "/note-legali"    },
+            ].map(t => (
+              <a key={t.label} href={t.href} className="text-white/20 hover:text-white/45 text-xs transition-colors">{t.label}</a>
             ))}
           </div>
         </div>
