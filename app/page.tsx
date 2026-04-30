@@ -4,6 +4,7 @@ import Services from "@/components/Services";
 import Stats from "@/components/Stats";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
+import Slideshow from "@/components/Slideshow";
 import Gallery from "@/components/Gallery";
 import HomeFAQ from "@/components/HomeFAQ";
 import Contact from "@/components/Contact";
@@ -19,6 +20,7 @@ export default function Home() {
       <Services />
       <About />
       <Projects />
+      <Slideshow />
       <Gallery />
       <HomeFAQ />
       <Contact />
