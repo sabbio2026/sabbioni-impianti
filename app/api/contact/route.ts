@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
       const resend = new Resend(process.env.RESEND_API_KEY);
       await resend.emails.send({
         from: "Sabbioni Impianti <noreply@sabbioniimpianti.it>",
-        to: "marzia@sabbioniimpianti.it",
+        to: "marzia@sabbionimpianti.it",
         subject: `Nuova richiesta da ${name}${company ? ` — ${company}` : ""}`,
         html: `
           <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;color:#0F1117">
