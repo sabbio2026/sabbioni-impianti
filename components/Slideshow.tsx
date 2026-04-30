@@ -6,35 +6,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const E = [0.23, 1, 0.32, 1] as const;
-
-const slides = [
-  { src: "/gallery/r01.jpg",  caption: "Impianto illuminazione residenziale" },
-  { src: "/gallery/n03.jpg",  caption: "Impianto illuminazione residenziale" },
-  { src: "/gallery/r03.jpg",  caption: "Impianto illuminazione residenziale" },
-  { src: "/gallery/r02.jpg",  caption: "Impianto illuminazione residenziale" },
-  { src: "/gallery/n04.jpg",  caption: "Impianto illuminazione residenziale" },
-  { src: "/gallery/r04.jpg",  caption: "Impianto illuminazione residenziale" },
-  { src: "/gallery/r06.jpg",  caption: "Impianto illuminazione residenziale" },
-  { src: "/gallery/n08.jpg",  caption: "Impianto illuminazione residenziale" },
-  { src: "/gallery/r12.jpg",  caption: "Domotica e automazione" },
-  { src: "/gallery/r16.jpg",  caption: "Domotica e automazione" },
-  { src: "/gallery/r15.jpg",  caption: "Impianto illuminazione residenziale" },
-  { src: "/gallery/n01.jpg",  caption: "Impianto illuminazione residenziale" },
-  { src: "/gallery/n13.jpg",  caption: "Impianto illuminazione residenziale" },
-  { src: "/gallery/i01.jpg",  caption: "Impianto illuminazione residenziale" },
-  { src: "/gallery/c01.jpg",  caption: "Illuminazione commerciale" },
-  { src: "/gallery/c02.jpg",  caption: "Illuminazione commerciale" },
-  { src: "/gallery/c06.jpg",  caption: "Illuminazione commerciale" },
-  { src: "/gallery/c03.jpg",  caption: "Quadri elettrici e distribuzione" },
-  { src: "/gallery/c04.jpg",  caption: "Quadri elettrici e distribuzione" },
-  { src: "/gallery/c05.jpg",  caption: "Quadri elettrici e distribuzione" },
-  { src: "/gallery/i05.png",  caption: "Quadri elettrici e distribuzione" },
-  { src: "/gallery/c07.jpg",  caption: "Impianto fotovoltaico" },
-];
-
 const INTERVAL = 4500;
 
-export default function Slideshow() {
+export type Slide = { src: string; caption: string };
+
+export default function Slideshow({ slides }: { slides: Slide[] }) {
   const [index, setIndex] = useState(0);
   const [dir, setDir]   = useState(1);
   const timer = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -44,8 +20,8 @@ export default function Slideshow() {
     setIndex(next);
   }, []);
 
-  const prev = useCallback(() => go((index - 1 + slides.length) % slides.length, -1), [index, go]);
-  const next = useCallback(() => go((index + 1) % slides.length,  1), [index, go]);
+  const prev = useCallback(() => go((index - 1 + slides.length) % slides.length, -1), [index, go, slides.length]);
+  const next = useCallback(() => go((index + 1) % slides.length,  1), [index, go, slides.length]);
 
   const startTimer = useCallback(() => {
     if (timer.current) clearInterval(timer.current);
@@ -53,7 +29,11 @@ export default function Slideshow() {
       setDir(1);
       setIndex(i => (i + 1) % slides.length);
     }, INTERVAL);
-  }, []);
+  }, [slides.length]);
+
+  useEffect(() => {
+    setIndex(0);
+  }, [slides]);
 
   useEffect(() => { startTimer(); return () => { if (timer.current) clearInterval(timer.current); }; }, [startTimer]);
 
@@ -61,12 +41,11 @@ export default function Slideshow() {
   const resume = () => startTimer();
 
   return (
-    <section
-      id="galleria"
+    <div
       className="relative w-full overflow-hidden bg-[#0A0E1A]"
       style={{ height: "88vh", minHeight: 500 }}
     >
-      {/* ── Sfondo sfocato (riempie le bande laterali/superiori) ── */}
+      {/* Sfondo sfocato */}
       <AnimatePresence initial={false}>
         <motion.div
           key={"bg-" + index}
@@ -87,7 +66,7 @@ export default function Slideshow() {
         </motion.div>
       </AnimatePresence>
 
-      {/* ── Foto principale — intera senza ritagli ── */}
+      {/* Foto principale */}
       <AnimatePresence initial={false} custom={dir}>
         <motion.div
           key={"img-" + index}
@@ -110,7 +89,6 @@ export default function Slideshow() {
               priority={index === 0}
             />
           </div>
-          {/* gradiente solo in basso per caption */}
           <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/70 to-transparent pointer-events-none" />
         </motion.div>
       </AnimatePresence>
@@ -137,7 +115,7 @@ export default function Slideshow() {
       </div>
 
       {/* Dots */}
-      <div className="absolute bottom-5 left-0 right-0 flex justify-center gap-1.5 z-10">
+      <div className="absolute bottom-5 left-0 right-0 flex justify-center gap-1.5 z-10 flex-wrap px-10">
         {slides.map((_, i) => (
           <button
             key={i}
@@ -165,6 +143,6 @@ export default function Slideshow() {
       >
         <ChevronRight size={30} />
       </button>
-    </section>
+    </div>
   );
 }

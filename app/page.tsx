@@ -4,7 +4,7 @@ import Services from "@/components/Services";
 import Stats from "@/components/Stats";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
-import Slideshow from "@/components/Slideshow";
+import SlideshowTabs from "@/components/SlideshowTabs";
 import HomeFAQ from "@/components/HomeFAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -19,7 +19,7 @@ export default function Home() {
       <Services />
       <About />
       <Projects />
-      <Slideshow />
+      <SlideshowTabs />
       <HomeFAQ />
       <Contact />
       <Footer />

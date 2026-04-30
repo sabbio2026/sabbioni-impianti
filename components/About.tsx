@@ -40,8 +40,7 @@ export default function About() {
             <span className="grad-lime">sul campo</span>
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-[#64748B]">
-            Dal 1990 installiamo e manteniamo impianti per privati, aziende e strutture pubbliche
-            in tutto il Centro Italia. Un unico interlocutore, senza subappalti sulle fasi critiche.
+            Dal 1990 installiamo e manuteniamo impianti per privati, aziende e strutture pubbliche in tutto il Centro Italia.
           </p>
         </motion.div>
 

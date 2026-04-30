@@ -99,6 +99,9 @@ export default function Footer() {
             ))}
           </div>
         </div>
+        <div className="pt-4 flex justify-center">
+          <p className="text-white/15 text-xs">Sito realizzato da <a href="https://nextwebai.agency" target="_blank" rel="noopener noreferrer" className="hover:text-white/40 transition-colors">NextWebAI.agency</a></p>
+        </div>
       </div>
     </footer>
   );
