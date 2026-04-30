@@ -54,9 +54,13 @@ export default function Navbar() {
       >
         <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-6 lg:px-10 relative">
           {/* Spacer mobile — bilancia l'hamburger a destra */}
-          <div className="w-9 h-9 lg:hidden" />
-          {/* Logo — centrato su mobile, a sinistra su desktop */}
-          <a href="#" onClick={go("#home")} className="flex-shrink-0 absolute left-1/2 -translate-x-1/2 lg:static lg:left-auto lg:translate-x-0">
+          <div className="w-9 h-9 lg:hidden flex-shrink-0" />
+          {/* Logo desktop — flow normale a sinistra */}
+          <a href="#" onClick={go("#home")} className="hidden lg:flex flex-shrink-0">
+            <Image src="/logo.svg" alt="Sabbioni Impianti" width={148} height={52} priority className="h-[38px] w-auto" />
+          </a>
+          {/* Logo mobile — centrato in assoluto */}
+          <a href="#" onClick={go("#home")} className="lg:hidden absolute left-1/2 -translate-x-1/2">
             <Image src="/logo.svg" alt="Sabbioni Impianti" width={148} height={52} priority className="h-[38px] w-auto" />
           </a>
 
